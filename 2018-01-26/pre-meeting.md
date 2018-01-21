@@ -1,4 +1,4 @@
-# 2018-01-21 Pre-meeting Notes
+# 2018-01-26 Pre-meeting Notes
 
 I'm excited to see everyone this Friday for the first Reverse Engineering
 (RE)/binary exploitation/CTF training meeting this semester! This github
@@ -27,31 +27,36 @@ installation of some Linux distribution, or a VM.
    [Fedora](https://getfedora.org/en/workstation/download/). It doesn't really
    matter which distro we're running, but there are tons of guides out there for
    Ubuntu, and 99% of what applies to Ubuntu applies to Mint.
-3. Create a new VM in VirtualBox ![New button in VirtualBox](images/newvm.png)
+3. Create a new VM in VirtualBox.  
+   ![New button in VirtualBox](images/newvm.png)
+
    1. Give it a name and select the type of OS it is (this only affects the menu
-      icon and sets some sensible default settings). ![Naming a VM in
-      VirtualBox](images/namevm.png)
+      icon and sets some sensible default settings).  
+      ![Naming a VM in VirtualBox](images/namevm.png)
    2. Allocate at least 2 GB of RAM for the VM (but make sure you leave your
-      host OS with enough). ![Allocating RAM in VirtualBox](images/ram.png)
-   3. Create a virtual hard disk. ![Creating a virtual hard disk in
-      VirtualBox](images/storage.png)
-   4. The default VDI format is fine. ![](images/storagetype.png)
+      host OS with enough).  
+      ![Allocating RAM in VirtualBox](images/ram.png)
+   3. Create a virtual hard disk.  
+      ![Creating a virtual hard disk in VirtualBox](images/storage.png)
+   4. The default VDI format is fine.  
+      ![](images/storagetype.png)
    5. Make sure you dynamically allocate this space, so it only uses as much
-      space on your host disk as you use inside the VM. ![Thin provisioning in
-      VirtualBox](dynamically_allocated.png)
+      space on your host disk as you use inside the VM.  
+      ![Thin provisioning in VirtualBox](images/dynamically_allocated.png)
    6. Give a name for the disk image file, and set a maximum size. I would
       recommend at least 16 GB, as resizing it later on is a bit of a pain.
       Remember, it doesn't use all of this storage at once, but only as the VM
-      uses space. ![Maximum disk image size](images/storagespace.png).
-   7. After creating the VM, we need to edit a couple of its settings.
+      uses space.  
+      ![Maximum disk image size](images/storagespace.png).
+   7. After creating the VM, we need to edit a couple of its settings.  
       ![Settings button in VirtualBox](images/settings.png)
    8. Unless you have reasons not to, enable VT-x/AMD-V, as this will speed up
-      virtualization. ![Enabling VT-x/AMD-V in
-      VirtualBox](images/virtualization.png)
+      virtualization.  
+      ![Enabling VT-x/AMD-V in VirtualBox](images/virtualization.png)
    9. Add the ISO you downloaded to the optical drive by clicking empty disk
       under the IDE controller and then clicking the dropdown next to "IDE
-      Secondary Master". ![Selecting an installation disk in
-      Virtualbox](images/disk.png)
+      Secondary Master".  
+      ![Selecting an installation disk in Virtualbox](images/disk.png)
 4. Now start the VM and follow the on-screen dialogs to install the guest OS on
    the virtual hard disk. You can choose to use "the whole disk" (instead of
    manually partitioning), since no other OS will be booting off this virtual
@@ -81,13 +86,13 @@ be putting all of the material for our meetings.
    If it prints out a path, you're good. If not, you need to install git
    * Ubuntu, Mint:
 
-    sudo apt install git
-    <type in password>
+         sudo apt install git
+         <type in password>
 
    * Fedora:
 
-    sudo dnf install git
-    <type in password>
+         sudo dnf install git
+         <type in password>
 
 3. Clone the repository by running `git clone https://github.com/kevorr/ctf-training`.
 
