@@ -1,6 +1,8 @@
 #+TITLE: 2018-01-26 Pre-meeting Notes
 #+DATE: 2018-01-21
 
+#+STARTUP: overview
+
 I'm excited to see everyone this Friday for the first Reverse Engineering
 (RE)/binary exploitation/CTF training meeting this semester! This github
 repository is where I will be uploading instructions before each meeting,
@@ -27,43 +29,52 @@ of what applies to Ubuntu applies to Mint.
 
 *** Create a new VM in VirtualBox.
 
-[[file:images/newvm.png][New button in VirtualBox]]
+[[file:images/newvm.png]]
 
 1. Give it a name and select the type of OS it is (this only affects the menu
    icon and sets some sensible default settings).
-   [[file:images/namevm.png][Naming a VM in VirtualBox]]
+
+   [[file:images/namevm.png]]
 
 2. Allocate at least 2 GB of RAM for the VM (but make sure you leave your
    host OS with enough).
-   [[file:images/ram.png][Allocating RAM in VirtualBox]]
+
+   [[file:images/ram.png]]
 
 3. Create a virtual hard disk.
-   [[file:images/storage.png][Creating a virtual hard disk in VirtualBox]]
+
+   [[file:images/storage.png]]
 
 4. The default VDI format is fine.
+
    [[file:images/storagetype.png]]
 
 5. Make sure you dynamically allocate this space, so it only uses as much
    space on your host disk as you use inside the VM.
-   [[file:images/dynamically_allocated.png][Thin provisioning in VirtualBox]]
+
+   [[file:images/dynamically_allocated.png]]
 
 6. Give a name for the disk image file, and set a maximum size. I would
    recommend at least 16 GB, as resizing it later on is a bit of a pain.
    Remember, it doesn't use all of this storage at once, but only as the VM
    uses space.
-   [[file:images/storagespace.png][Maximum disk image size]].
+
+   [[file:images/storagespace.png]].
 
 7. After creating the VM, we need to edit a couple of its settings.
-   [[file:images/settings.png][Settings button in VirtualBox]]
+
+   [[file:images/settings.png]]
 
 8. Unless you have reasons not to, enable VT-x/AMD-V, as this will speed up
    virtualization.
-   [[file:images/virtualization.png][Enabling VT-x/AMD-V in VirtualBox]]
+
+   [[file:images/virtualization.png]]
 
 9. Add the ISO you downloaded to the optical drive by clicking empty disk
    under the IDE controller and then clicking the dropdown next to "IDE
    Secondary Master".
-   [[file:images/disk.png][Selecting an installation disk in Virtualbox]]
+
+   [[file:images/disk.png]]
 
 *** Start the VM
 1. Now start the VM and follow the on-screen dialogs to install the guest OS on
@@ -113,7 +124,7 @@ be putting all of the material for our meetings.
 When I upload new stuff, you can update your copy to match mine by running ~git
 pull origin master~ inside the directory that it cloned into initially.
 
-## Questions?
+* Questions?
 
 If you have any questions, contact me on slack (I'm @kevin) or shoot out a
 message in the #general channel.
