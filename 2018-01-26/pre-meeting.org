@@ -112,7 +112,7 @@ be putting all of the material for our meetings.
        <type in password>
      #+END_SRC
 
-   - Fedora: asdfadsf
+   - Fedora:
      #+BEGIN_SRC shell
        sudo dnf install git
        <type in password>
