@@ -17,7 +17,12 @@ and the [[http://lists.acomp.usf.edu/mailman/listinfo/wcsc][mailing list]], as t
 Before we get started on Friday, I would like everyone to have either a native
 installation of some Linux distribution, or a VM.
 
-** How do I do that?
+Update thanks to [@murmus](https://github.com/murmus): The Windows Subsystem for
+Linux (WSL), also known as Bash on Windows, can run 32-bit binaries, which is
+the only reason I excluded it here. Instructions are in the "Using WSL" section
+below.
+
+** Creating a VM
 
 Install [[https://www.virtualbox.org/wiki/Downloads][VirtualBox]]. VirtualBox is free, so I recommend it to anyone getting
 started. Click the download link for your OS (probably Windows or MacOS).
@@ -97,6 +102,14 @@ of what applies to Ubuntu applies to Mint.
 
 Awesome! We have a Linux VM up and running. We will be using this extensively on
 Friday. If you know how to, make sure ~gcc~ and ~gdb~ are installed.
+
+** Using WSL
+Follow the instructions [here](https://www.computerhope.com/issues/ch001879.htm)
+to install and activate WSL, and install a distro.
+
+After installing, open the start menu, and search for "bash". After the terminal
+opens up, enter the command `sudo sh -c "apt update && apt upgrade && apt
+install qemu-user"`. (Thanks [@murmus](https://github.com/murmus))
 
 ** Installing git and cloning this repository
 
