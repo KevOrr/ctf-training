@@ -1,0 +1,56 @@
+#+TITLE: Posix Shell Cheat Sheet
+
+* Basics
+** Navigation
+- ~cd~ :: change directory
+- ~ls~ :: list contents of directory(ies), or list individual files
+** File manipulation
+- ~mkdir~ :: create (make) directory
+- ~touch~ :: set file modification time (default to now), create file if not exists
+- ~mv~ :: move/rename file (source and target must be same filesystem)
+- ~cp~ :: copy file
+- ~rm~ :: remove files (optionally recursively remove directories)
+- ~chmod~ :: change permission mode
+- ~chown~ :: change owner and group
+- ~echo~ :: print something to stdout
+- ~cat~ :: print file contents of each argument to stdout
+- ~less~ :: read file(s) in pager (scrollable, searchable, etc)
+** Finding files
+- ~locate~ :: search database for a file
+- ~updatedb~ :: update database with current filesystem
+** Docs
+- ~man~ :: lookup manual page for a command, config file, C function, etc
+** Misc
+- ~clear~ :: clear terminal
+- ~reset~ :: reset all terminal control settings, then clear. Use if terminal is
+             acting funky
+* Job control
+- ~jobs~ :: list backgrounded jobs
+- ~bg~ :: resume stopped job in background (return prompt)
+- ~fg~ :: resume stopped job in foreground
+* Process control
+- ~ps~ :: list running processes
+- ~top~ :: monitor running processes
+- ~htop~ :: better version of ~top~
+- ~kill~ :: send signal (default SIGTERM (terminate)) to a process
+- ~pgrep~ :: search for a process by name
+- ~pkill~ :: kill a process by name
+* Recon
+- ~strings~ :: finds runs of printable characters that are longer than a certain
+               length. Useful for finding strings embedded in programs, etc
+- ~file~ :: figure out what kind of file we're looking at based on [[https://en.wikipedia.org/wiki/Magic_number_(programming)][Magic Numbers]]
+- ~binwalk~ :: like ~file~, searches for magic numbers in a file, but this
+               searches the whole file, finding files potentially hidden in the
+               main file
+* Network
+- ~ping~ :: send ICMP Echo requests to host (see if you can reach a host,
+            measure latency)
+- ~ifconfig~ :: show interface (network card) configuration
+- ~dig~ :: get DNS records
+- ~nslookup~ :: another command to get DNS records
+* C
+- ~gcc~ :: GNU Compiler Collection, used to compile (and assemble and link)
+           mainly C and C++
+- ~gdb~ :: GNU Debugger, used to debug programs
+- ~objdump~ :: Disassembles object files (compiled but not linked) and full
+               binaries
