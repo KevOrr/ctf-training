@@ -1,3 +1,7 @@
 .python-version
 .gdb_history
 peda-session*
+
+**/GPATH
+**/GRTAGS
+**/GTAGS
