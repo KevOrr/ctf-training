@@ -25,7 +25,7 @@ void read_flag(unsigned long long length) {
     char *bufp = buf;
 
     while (1) {
-        char c = fgetc(f);
+        int c = fgetc(f);
         if (c == EOF || c == '\n') break;
         else *bufp++ = c;
     }
