@@ -19,6 +19,7 @@ int main() {
     fputs("This is a simple hello world application.\n"
           "To save space, I'm using the same file for my RSA private key as temporary data.\n"
           "Please enter your name: ", stdout);
+    fflush(stdout);
 
     fgets(buf, buflen, stdin);
 

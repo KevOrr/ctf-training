@@ -5,7 +5,8 @@
 char *argv0;
 
 void usage() {
-    fprintf(stderr, "USAGE: %s <flag_length>\n", argv0);
+    fprintf(stdout, "USAGE: %s <flag_length>\n", argv0);
+    fflush(stdout);
     exit(1);
 }
 
@@ -31,6 +32,7 @@ void read_flag(unsigned long long length) {
     *bufp = '\0';
 
     printf("Hello, %s!\n", buf);
+    fflush(stdout);
 }
 
 int main(int argc, char *argv[]) {
