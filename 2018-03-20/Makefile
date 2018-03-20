@@ -1,5 +1,5 @@
 CC := gcc
-CCFLAGS := -g -O1 -fno-stack-protector -D FORTIFY_SOURCE=0
+CCFLAGS := -g -O1 -fno-stack-protector -D FORTIFY_SOURCE=0 -z execstack
 
 all: run readflag
 
@@ -9,6 +9,7 @@ run: run.c
 readflag: readflag.c
 	$(CC) $(CCFLAGS) -m32 -o $@ $?
 
-clean: rm -f run readflag
+clean:
+	rm -f run readflag
 
 .PHONY: clean all
