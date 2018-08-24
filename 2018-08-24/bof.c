@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 void super_secret_shell() {
-    const char *new_env[] = {"PS1=omgroot> "};
-    execle("/bin/bash", "-bash", "--norc", "--noprofile", NULL, new_env);
+    puts("Welcome, admin");
+    system("/bin/bash -i");
 }
 
 void do_hello() {
