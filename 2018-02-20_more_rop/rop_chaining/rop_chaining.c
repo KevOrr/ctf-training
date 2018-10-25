@@ -43,9 +43,11 @@ void check() {
 
 void vuln() {
     uint32_t buf[20];
+    puts("Can you collect all 4 flags?");
     fgets(buf, 20*sizeof(uint64_t), stdin);
 }
 
 int main() {
     vuln();
+    puts("Oops, sorry!");
 }

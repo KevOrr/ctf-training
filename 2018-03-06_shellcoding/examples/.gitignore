@@ -1,0 +1,4 @@
+*.o
+shell
+shell_no_null
+exit
